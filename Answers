@@ -1,0 +1,18 @@
+Part 1:
+    a). The reason that the program generate so many long sentences is because of the Grammar's
+         weights. For example, once changed NP to 0.2 (w) we will get shorter sentences
+
+         TODO: rephrase better
+
+    b). We only have one rule that leads to Adj Noun, and eventually Noun will be a word due to
+         non-deterministic choices, and the adjectives stop.
+
+         TODO: rephrase better
+
+    c). We will have to change the weight of the following rules:
+            NP  NP PP (down)
+            Noun    Adj Noun (up)
+
+         TODO: rephrase better
+
+        When using NP 0.2 and Noun 2-3 we were able to generate better sentences
