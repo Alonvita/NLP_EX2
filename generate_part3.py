@@ -1,6 +1,7 @@
 from collections import defaultdict
 import random
 
+
 class PCFG(object):
     def __init__(self):
         self._rules = defaultdict(list)

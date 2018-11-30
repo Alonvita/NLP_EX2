@@ -54,7 +54,7 @@ class PCFG(object):
 if __name__ == '__main__':
     import sys
 
-    output_fp = open('grammar1.gen', 'w')
+    output_fp = open('grammar2.gen', 'w')
 
     if len(sys.argv) != 2:
         if len(sys.argv) != 4:
