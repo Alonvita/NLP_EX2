@@ -63,11 +63,12 @@ if __name__ == '__main__':
 
     pcfg = PCFG.from_file(sys.argv[1])
     num_sentences = 1
-    if len(sys.argv) > 2 and sys.argv[2] == '-n':
-        num_sentences = int(sys.argv[3])
-    if sys.argv[2] == '-t':
-        pcfg._generatrees = True
-    if len(sys.argv) > 3 and sys.argv[3] == '-n':
-        num_sentences = int(sys.argv[4])
+    if len(sys.argv) > 2:
+        if sys.argv[2] == '-n':
+            num_sentences = int(sys.argv[3])
+        if sys.argv[2] == '-t':
+            pcfg._generatrees = True
+        if len(sys.argv) > 3 and sys.argv[3] == '-n':
+            num_sentences = int(sys.argv[4])
     for i in range(num_sentences):
         print pcfg.random_sent()
